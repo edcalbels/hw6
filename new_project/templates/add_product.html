@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="form-content">
+        <h3>Создание товара</h3>
+        <form action="/add_product/" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-danger" value="Отправить данные">
+        </form>
+    </div>
+{% endblo
